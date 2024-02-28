@@ -68,7 +68,6 @@ public class GuestbookController {
 	@RequestMapping(value="/guest/deleteform", method= {RequestMethod.GET, RequestMethod.POST})
 	public String deleteForm(@RequestParam(value="no") int no, Model model) {
 		System.out.println("GuestbookController.deleteForm()");
-		System.out.println(no);
 		
 		model.addAttribute("no", no);
 		return "deleteForm";
