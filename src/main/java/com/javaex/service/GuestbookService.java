@@ -31,14 +31,6 @@ public class GuestbookService {
 		
 	}
 
-	public GuestVo exeDeleteForm(int no) {
-		System.out.println("GuestbookController.exeDeleteForm()");
-
-		GuestVo guestVo = guestbookDao.select(no);
-		
-		return guestVo;
-	}
-
 	public void exeDelete(int no, String password) {
 		System.out.println("GuestbookController.exeDelete()");
 		System.out.println(no);

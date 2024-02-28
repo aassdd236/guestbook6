@@ -70,9 +70,7 @@ public class GuestbookController {
 		System.out.println("GuestbookController.deleteForm()");
 		System.out.println(no);
 		
-		GuestVo guestVo=guestbookService.exeDeleteForm(no);
-
-		model.addAttribute("guestVo", guestVo);
+		model.addAttribute("no", no);
 		return "deleteForm";
 	}
 }

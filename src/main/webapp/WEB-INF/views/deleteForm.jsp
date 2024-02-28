@@ -12,7 +12,7 @@
 			<tr>
 				<td>비밀번호</td>
 				<td><input type="password" name="password"></td>
-                <input type="hidden" name="no" value="${guestVo.no}">
+                <input type="hidden" name="no" value="${no}">
 				<td><button type="submit">삭제</button></td>
 			</tr>
 		</table>

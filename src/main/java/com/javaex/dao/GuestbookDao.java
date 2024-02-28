@@ -145,43 +145,4 @@ public class GuestbookDao {
 		return count;
 	}
 
-	public GuestVo select(int no) {
-		
-		this.getConnection();
-		GuestVo guestVo=null;
-
-		try {
-			// 3. SQL문 준비 / 바인딩 / 실행
-			// SQL문 준비
-			String query="select no, name, password, content "
-					+ "from guestbook "
-					+ "where no=?";
-
-			// 바인딩
-			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, no);
-			
-			// 실행
-			rs = pstmt.executeQuery();
-
-			// 4.결과처리
-			while (rs.next()) {// 반복
-				no = rs.getInt("no");
-				String name = rs.getString("name");
-				String password = rs.getString("password");
-				String content = rs.getString("content");
-
-				// db에서 가져온 데이터 vo로 묶기
-				guestVo = new GuestVo(no, name, password, content);
-
-			}
-
-		} catch (SQLException e) {
-			System.out.println("error:" + e);
-		}
-		this.close();
-		
-		return guestVo;
-	}
-
 }
