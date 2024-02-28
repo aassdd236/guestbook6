@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/guestbook5/guest/delete" method="get">
+	<form action="/guestbook6/guest/delete" method="get">
 		<table>
 			<tr>
 				<td>비밀번호</td>
@@ -20,6 +20,6 @@
 	</form>
 	
 	<br><br>
-	<a href="/guestbook5/guest/addList">메인으로 돌아가기</a>
+	<a href="/guestbook6/guest/addList">메인으로 돌아가기</a>
 </body>
 </html>

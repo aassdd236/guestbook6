@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.javaex.dao.GuestbookDao;
 import com.javaex.service.GuestbookService;
 import com.javaex.vo.GuestVo;
 
@@ -52,13 +51,11 @@ public class GuestbookController {
 	
 	//삭제
 	@RequestMapping(value="/guest/delete", method= {RequestMethod.GET, RequestMethod.POST})
-	public String delete(@RequestParam(value="no") int no,
-						@RequestParam(value="password") String password) {
+	public String delete(@ModelAttribute GuestVo guestVo) {
 		
 		System.out.println("GuestbookController.delete()");
-		System.out.println(no);
 
-		guestbookService.exeDelete(no, password);
+		guestbookService.exeDelete(guestVo);
 
 		
 		return "redirect:/guest/addList";
